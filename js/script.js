@@ -11,6 +11,15 @@ function widget(){
 }
 */
 
+
+//berkeleyspn@gmail.com
+//GoJackets!
+
+
+//<a class="twitter-timeline" href="https://twitter.com/BHSjacketSports">Tweets by BHSjacketSports</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
 $(document).ready(function(){
     $()
     document.getElementById("widget").href = "'http://www.maxpreps.com/local/school/home.aspx?'" + ketanFunc() + "'schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'";
