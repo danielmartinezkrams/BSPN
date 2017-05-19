@@ -11,7 +11,16 @@ function widget(){
 }
 */
 
+$(document).ready(function(){
+    $()
+    document.getElementById("widget").href = "'http://www.maxpreps.com/local/school/home.aspx?'" + ketanFunc() + "'schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'";
 
-document.getElementById("widget").href = "http://www.maxpreps.com/local/school/home.aspx?" + ketanFunc() + "schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791";
+
+
+});
+
 function ketanFunc() {
+
+
+
 }
