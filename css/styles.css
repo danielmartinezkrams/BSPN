@@ -2,6 +2,7 @@
     font-family: "My Custom Font";
     src: url(fonts/esp_bdit.ttf) format("truetype");
 }
+
 h1.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
     font-size: 100px;
@@ -11,13 +12,13 @@ h1.customfont {
 }
 
 h3{
-    position: absolute;
-    top: 20%;
-    left: 2%;
+    position: relative;
+    top: 200px;
+    left: 30px;
 }
 
 #widget{
-    position: absolute;
-    top: 26%;
-    left: 2%;
+    position: relative;
+    top: 205px;
+    left: 30px;
 }
