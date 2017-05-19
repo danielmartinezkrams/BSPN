@@ -13,12 +13,20 @@ h1.customfont {
 
 h3{
     position: relative;
-    top: 200px;
+    top: 10px;
     left: 30px;
 }
 
 #widget{
     position: relative;
-    top: 205px;
+    top: 20px;
     left: 30px;
+}
+
+#bhsLogo{
+    height: 150px;
+    width: 175px;
+    position: relative;
+    top: 50px;
+    left: 375px;
 }
