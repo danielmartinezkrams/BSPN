@@ -33,3 +33,7 @@ function ketanFunc() {
 
 
 }
+
+function pageChanger(to){
+    $("body").pagecontainer("change", "#" + to, {});
+}
