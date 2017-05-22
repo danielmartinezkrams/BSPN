@@ -35,3 +35,9 @@ h3{
     top: 20px;
     left: 375px;
 }
+
+[data-role="footer"]{
+    position: fixed;
+    top: 50%;
+    left: 43%;
+}
