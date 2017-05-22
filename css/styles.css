@@ -13,7 +13,7 @@ h1.customfont {
     font-size: 100px;
     color: red;
     position: absolute;
-    left: 2%;
+    left: 19%;
 }
 
 h3{
@@ -29,8 +29,9 @@ h3{
 }
 
 .bhsLogo{
-    height: 150px;
-    width: 175px;
-    top: 50px;
+    height: 100px;
+    width: 125px;
+    position: absolute;
+    top: 20px;
     left: 375px;
 }
