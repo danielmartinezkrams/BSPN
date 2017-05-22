@@ -1,3 +1,8 @@
+body{
+    text-align: center;
+}
+
+
 @font-face {
     font-family: "My Custom Font";
     src: url(fonts/esp_bdit.ttf) format("truetype");
@@ -6,7 +11,7 @@
 h1.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
     font-size: 100px;
-    color: darkred;
+    color: red;
     position: absolute;
     left: 2%;
 }
@@ -23,10 +28,9 @@ h3{
     left: 30px;
 }
 
-#bhsLogo{
+.bhsLogo{
     height: 150px;
     width: 175px;
-    position: relative;
     top: 50px;
     left: 375px;
 }

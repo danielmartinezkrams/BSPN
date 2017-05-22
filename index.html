@@ -3,31 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <title>BSPN</title>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/script.js"></script>
 </head>
 <body>
 
-    <div data-role="header">
-        <h1 class="customfont">
-            BSPN
-        </h1>
-        <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
-    </div>
-    <img id="bhsLogo" src="images/transparent-jackets-logo.png">
-    <div data-role="page" id="page1">
+
+
+
+
+    <div data-role="page" id="home">
+
+        <div data-role="header">
+            <h1 class="customfont">
+                BSPN
+            </h1>
+            <img class="bhsLogo" src="images/transparent-jackets-logo.png">
+            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+        </div>
+
+
+
+
         <h3 id="slogan">
             The Berkeley-Wide Leader in Sports
         </h3>
+
+
+        <div>
+            <script type="text/javascript" >(function(d){var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];mp.type='text/javascript';mp.async=true;mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';h.appendChild(mp);})(document);</script>
+            <a class="maxpreps-widget-link" data-width="100%" data-item-count="10" data-type="wall" data-include-header="true" data-member-id="3680d111-54e5-495d-b7c2-53aecd7a6d41" data-allow-scrollbar="true" href="http://www.maxpreps.com/local/school/home.aspx?schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791" >Berkeley High School School Info</a>
+        </div>
+
+
+        <div data-role="footer">
+            <a href="#home" data-role="button" data-icon="home"></a>
+            <a href="#favorites" data-role="button" data-icon="star"></a>
+            <a href="#sports" data-role="button" data-icon="grid"></a>
+            <a href="#news" data-role="button" data-icon="bullets"></a>
+        </div>
+
     </div>
 
-    <div>
-        <script type="text/javascript" >(function(maxPreps){var mp = maxPreps.createElement('script'),h=maxPreps.getElementsByTagName('head')[0];mp.type='text/javascript';mp.async=true;mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';h.appendChild(mp);})(document);</script>
-        <a id="widget" class="maxpreps-widget-link" data-width="100%" data-item-count="25" data-type="wall" data-include-header="true" data-member-id="3680d111-54e5-495d-b7c2-53aecd7a6d41" data-allow-scrollbar="true" href="" >Berkeley High School</a>
+
+    <div data-role="page" id="favorites">
+        <div data-role="header">
+            <h1 class="customfont">
+                BSPN
+            </h1>
+            <img class="bhsLogo" src="images/transparent-jackets-logo.png">
+            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+        </div>
+
+
+        <div data-role="footer">
+            <a href="#home" data-role="button" data-icon="home"></a>
+            <a href="#favorites" data-role="button" data-icon="star"></a>
+            <a href="#sports" data-role="button" data-icon="grid"></a>
+            <a href="#news" data-role="button" data-icon="bullets"></a>
+        </div>
     </div>
+
+
+    <div data-role="page" id="sports">
+
+        <div data-role="header">
+            <h1 class="customfont">
+                BSPN
+            </h1>
+            <img class="bhsLogo" src="images/transparent-jackets-logo.png">
+            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+            </table>
+        </div>
+        <div data-role="footer">
+            <a href="#home" data-role="button" data-icon="home"></a>
+            <a href="#favorites" data-role="button" data-icon="star"></a>
+            <a href="#sports" data-role="button" data-icon="grid"></a>
+            <a href="#news" data-role="button" data-icon="bullets"></a>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="news">
+
+
+        <div data-role="header">
+            <h1 class="customfont">
+                BSPN
+            </h1>
+            <img class="bhsLogo" src="images/transparent-jackets-logo.png">
+            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+        </div>
+        <a data-width="100%" class="twitter-timeline" href="https://twitter.com/BHSjacketSports">
+            Tweets by @BHSjacketSports
+        </a>
+        <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+        <div data-role="footer">
+            <a href="#home" data-role="button" data-icon="home"></a>
+            <a href="#favorites" data-role="button" data-icon="star"></a>
+            <a href="#sports" data-role="button" data-icon="grid"></a>
+            <a href="#news" data-role="button" data-icon="bullets"></a>
+        </div>
+    </div>
+
+
+
+
+
 
 
 </body>

@@ -11,6 +11,15 @@ function widget(){
 }
 */
 
+
+//berkeleyspn@gmail.com
+//GoJackets!
+
+
+//<a class="twitter-timeline" href="https://twitter.com/BHSjacketSports">Tweets by BHSjacketSports</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
 $(document).ready(function(){
     var boysBase = $("#boysBase");
     var boysBask = $("#boysBask");
@@ -54,4 +63,8 @@ function ketanFunc() {
 
 
 
+}
+
+function pageChanger(to){
+    $("body").pagecontainer("change", "#" + to, {});
 }
