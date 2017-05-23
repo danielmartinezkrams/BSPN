@@ -29,10 +29,8 @@ h3{
 .bhsLogo{
     height: 100px;
     width: 125px;
-<<<<<<< Updated upstream
     position: relative;
     top: -20px;
-=======
     position: absolute;
     top: 20px;
     left: 375px;
@@ -113,5 +111,4 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
->>>>>>> Stashed changes
 }
