@@ -46,6 +46,9 @@ $(document).ready(function(){
     var sportsArrayB = ["boys,baseball", "boys,basketball", "boys,crosscountry", "boys,football", "boys,golf", "boys,lacrosse", "boys,soccer", "boys,tennis", "boys,trackfield", "boys,volleyball", "boys,waterpolo", "boys,wrestling", "girls,basketball", "girls,fieldhockey", "girls,golf", "girls,lacrosse", "girls,soccer", "girls,softball", "girls,tennis", "girls,volleyball", "girls,waterpolo"];
     for(var i=0; i < sportsArray.length; i++){
         sportsArray[i].click(function(){
+            $("body").pagecontainer("change", "#sports2", {});
+            console.log(i);
+            console.log(sportsArrayB[i]);
             document.getElementById("widget").href = "'http://www.maxpreps.com/local/school/home.aspx?gendersport='" + sportsArrayB[i] + "'&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'";
         })
     }
