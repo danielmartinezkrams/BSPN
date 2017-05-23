@@ -12,8 +12,6 @@ h1.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
     font-size: 100px;
     color: red;
-    position: absolute;
-    left: 19%;
 }
 
 h3{
@@ -31,13 +29,6 @@ h3{
 .bhsLogo{
     height: 100px;
     width: 125px;
-    position: absolute;
+    position: relative;
     top: 20px;
-    left: 375px;
-}
-
-[data-role="footer"]{
-    position: fixed;
-    top: 50%;
-    left: 43%;
 }
