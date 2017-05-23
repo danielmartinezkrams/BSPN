@@ -6,13 +6,11 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/script.js"></script>
 </head>
 <body>
+
     <div data-role="page" id="home">
 
         <div data-role="header" data-id="theHeader" data-position="fixed">
@@ -20,7 +18,7 @@
                 BSPN
             </h1>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+            <a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
         </div>
 
         <h3 id="slogan">
@@ -37,12 +35,37 @@
         <div data-role="footer" data-id="theFooter" data-position="fixed">
             <a href="#home" data-role="button" data-icon="home"></a>
             <a href="#favorites" data-role="button" data-icon="star"></a>
-            <a href="#sports1" data-role="button" data-icon="grid"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid"></a>
             <a href="#news" data-role="button" data-icon="bullets"></a>
         </div>
 
     </div>
 
+
+    <div data-role="page" id="options">
+
+        <div data-role="header" data-id="theHeader" data-position="fixed">
+            <h1 class="customfont">
+                BSPN
+            </h1>
+            <img class="bhsLogo" src="img/transparent-jackets-logo.png">
+            <a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
+        </div>
+
+        <div>
+            <h2 class="customfont">
+                this will be our options page
+            </h2>
+        </div>
+
+        <div data-role="footer" data-id="theFooter" data-position="fixed">
+            <a href="#home" data-role="button" data-icon="home"></a>
+            <a href="#favorites" data-role="button" data-icon="star"></a>
+            <a href="#sports1" data-role="button" data-icon="grid"></a>
+            <a href="#news" data-role="button" data-icon="bullets"></a>
+        </div>
+
+    </div>
 
     <div data-role="page" id="favorites">
 
@@ -51,27 +74,27 @@
                 BSPN
             </h1>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+            <a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
         </div>
 
 
         <div data-role="footer" data-id="theFooter" data-position="fixed">
             <a href="#home" data-role="button" data-icon="home"></a>
             <a href="#favorites" data-role="button" data-icon="star"></a>
-            <a href="#sports1" data-role="button" data-icon="grid"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid"></a>
             <a href="#news" data-role="button" data-icon="bullets"></a>
         </div>
     </div>
 
 
-    <div data-role="page" id="sports1">
+    <div data-role="page" id="sportsA">
 
         <div data-role="header" data-id="theHeader" data-position="fixed">
             <h1 class="customfont">
                 BSPN
             </h1>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+            <a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
         </div>
 
             <table data-role="table" class="ui-responsive">
@@ -166,34 +189,34 @@
                 </tr>
                 <tr id="boysWre">
                     <td>
-                        <img class="sports" src="img/boyswre.png">
+                        <img class="sports" src="img/boysbase.png">
                     </td>
                     <td>
-                        <h2 class="sportNames">Boys' Wrestling</h2>
+                        <h2 class="sportNames">Boys' Baseball</h2>
                     </td>
                 </tr>
                 <tr id="girlsBask">
                     <td>
-                        <img class="sports" src="img/girlsbask.png">
+                        <img class="sports" src="img/boysbase.png">
                     </td>
                     <td>
-                        <h2 class="sportNames">Girls' Basketball</h2>
+                        <h2 class="sportNames">Boys' Baseball</h2>
                     </td>
                 </tr>
                 <tr id="girlsFH">
                     <td>
-                        <img class="sports" src="img/girlsfh.png">
+                        <img class="sports" src="img/boysbase.png">
                     </td>
                     <td>
-                        <h2 class="sportNames">Girls' Field Hockey</h2>
+                        <h2 class="sportNames">Boys' Baseball</h2>
                     </td>
                 </tr>
                 <tr id="girlsGolf">
                     <td>
-                        <img class="sports" src="img/girlsgolf.png">
+                        <img class="sports" src="img/boysbase.png">
                     </td>
                     <td>
-                        <h2 class="sportNames">Girls' Golf</h2>
+                        <h2 class="sportNames">Boys' Baseball</h2>
                     </td>
                 </tr>
                 <tr id="girlsLax">
@@ -250,7 +273,7 @@
         <div data-role="footer" data-id="theFooter" data-position="fixed">
             <a href="#home" data-role="button" data-icon="home"></a>
             <a href="#favorites" data-role="button" data-icon="star"></a>
-            <a href="#sports1" data-role="button" data-icon="grid"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid"></a>
             <a href="#news" data-role="button" data-icon="bullets"></a>
         </div>
     </div>
@@ -270,7 +293,7 @@
                 BSPN
             </h1>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+            <a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
         </div>
         <a data-width="100%" class="twitter-timeline" href="https://twitter.com/BHSjacketSports">
             Tweets by @BHSjacketSports
@@ -282,7 +305,7 @@
         <div data-role="footer" data-id="theFooter" data-position="fixed">
             <a href="#home" data-role="button" data-icon="home"></a>
             <a href="#favorites" data-role="button" data-icon="star"></a>
-            <a href="#sports1" data-role="button" data-icon="grid"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid"></a>
             <a href="#news" data-role="button" data-icon="bullets"></a>
         </div>
     </div>
