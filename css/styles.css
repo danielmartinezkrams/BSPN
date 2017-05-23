@@ -38,16 +38,16 @@ h3{
 
 [data-role="footer"]{
     position: fixed;
-    top: 100%;
-    left: 100%;
+    top: 50%;
+    left: 43%;
 }
 
-.form {
+form {
     border: 3px solid #f1f1f1;
 }
 
 /* Full-width inputs */
-.input[type=text], input[type=password] {
+input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -57,7 +57,7 @@ h3{
 }
 
 /* Set a style for all buttons */
-.button {
+button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -68,7 +68,7 @@ h3{
 }
 
 /* Add a hover effect for buttons */
-.button:hover {
+button:hover {
     opacity: 0.8;
 }
 
@@ -111,8 +111,4 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
-
-}
-.sports{
-    width: 40px
 }
