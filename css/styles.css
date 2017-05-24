@@ -103,3 +103,19 @@ span.psw {
         width: 100%;
     }
 }
+
+#signInButton{
+    height: 15px;
+    width: 75px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+#signUpButton{
+    height: 15px;
+    width: 75px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
