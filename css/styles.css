@@ -30,15 +30,7 @@ h3{
     height: 100px;
     width: 125px;
     position: relative;
-    top: -20px;
-    position: absolute;
-    top: 20px;
-    left: 375px;
-}
-
-[data-role="footer"]{
-    position: fixed;
-
+    top: -10px;
 }
 
 form {
@@ -112,10 +104,20 @@ span.psw {
     }
 }
 
-.fetched_tweets.light > li{border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
-    border-width: 1px;
-    border-style: solid;}
-.fetched_tweets.dark > li{
-    border-color: #444;
-    border-width: 1px;
-    border-style: solid;}
+#signInButton{
+    height: 15px;
+    width: 75px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+#signUpButton{
+    height: 15px;
+    width: 75px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+lol{}
