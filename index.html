@@ -305,6 +305,90 @@
             <p>Please contact the <a href="mailto:">HelpDesk</a> to resolve this issue.</p>
         </div><!-- /content -->
     </div><!-- /page -->
+    <div data-role="page">
+        <div data-role="header" data-theme="c">
+            <h1>Book It</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h3>Sign Up</h3>
+            <label for="txt-first-name">First Name</label>
+            <input type="text" name="txt-first-name" id="txt-first-name" value="">
+            <label for="txt-last-name">Last Name</label>
+            <input type="text" name="txt-last-name" id="txt-last-name" value="">
+            <label for="txt-email">Email Address</label>
+            <input type="text" name="txt-email" id="txt-email" value="">
+            <label for="txt-password">Password</label>
+            <input type="password" name="txt-password" id="txt-password" value="">
+            <label for="txt-password-confirm">Confirm Password</label>
+            <input type="password" name="txt-password-confirm" id="txt-password-confirm" value="">
+            <a href="#dlg-sign-up-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+            <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header">
+                    <h1>Almost done...</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h3>Confirm Your Email Address</h3>
+                    <p>We sent you an email with instructions on how to confirm your email address. Please check your inbox and follow the instructions in the email.</p>
+                    <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+            </div>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
+        <div data-role="header">
+            <h1>Almost done...</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Confirm Your Email Address</h3>
+            <p>We sent you an email with instructions on how to confirm your email address. Please check your inbox and follow the instructions in the email.</p>
+            <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+        </div>
+    </div>
+    <div data-role="page">
+        <div data-role="header" data-theme="c">
+            <h1>Book It</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h3>Password Reset</h3>
+            <label for="txt-email">Enter your email address</label>
+            <input type="text" name="txt-email" id="txt-email" value="">
+            <a href="#dlg-pwd-reset-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+            <div data-role="popup" id="dlg-pwd-reset-sent" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header">
+                    <h1>Password Reset</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h3>Check Your Inbox</h3>
+                    <p>We sent you an email with instructions on how to reset your password. Please check your inbox and follow the instructions in the email.</p>
+                    <div class="mc-text-center"><a href="end-password-reset.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+            </div>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="page">
+        <div data-role="header" data-theme="c">
+            <h1>Book It</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h3>Reset Password</h3>
+            <label for="txt-tmp-password">Provisional Password</label>
+            <input type="password" name="txt-tmp-password" id="txt-tmp-password" value="">
+            <label for="txt-new-password">New Password</label>
+            <input type="password" name="txt-new-password" id="txt-new-password" value="">
+            <label for="txt-new-password-confirm">Confirm New Password</label>
+            <input type="password" name="txt-new-password-confirm" id="txt-new-password-confirm" value="">
+            <a href="#dlg-pwd-changed" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+            <div data-role="popup" id="dlg-pwd-changed" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header">
+                    <h1>Done</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <p>Your password was changed.</p>
+                    <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+            </div>
+        </div><!-- /content -->
+    </div><!-- /page -->
 
 
 
