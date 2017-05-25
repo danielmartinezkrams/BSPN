@@ -33,6 +33,21 @@ function createSportWidget(location){
 }
 
 
+
+function signIn(){
+    var $submit = $("#signInSubmit");
+    $submit.click(function () {
+        var email = $("#txt-email-signin").val();
+        var pass = $("#txt-password-signin").val();
+    })
+}
+
+
+
+
+
+
+
 $(document).ready(function(){
 /*
     var $boysBase = $("#boysBase");
