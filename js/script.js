@@ -20,44 +20,69 @@ function widget(){
 
 
 
-$(document).ready(function(){
-
-    var boysBase = $("#boysBase");
-    var boysBask = $("#boysBask");
-    var boysXX = $("#boysXX");
-    var boysFoot = $("#boysFoot");
-    var boysGolf = $("#boysGolf");
-    var boysLax = $("#boysLax");
-    var boysSoc = $("#boysSoc");
-    var boysTen = $("#boysTen");
-    var boysTNF = $("#boysTNF");
-    var boysVol = $("#boysVol");
-    var boysWP = $("#boysWP");
-    var boysWre = $("#boysWre");
-    var girlsBask = $("#girlsBask");
-    var girlsFH = $("#girlsFH");
-    var girlsGolf = $("#girlsGolf");
-    var girlsLax = $("#girlsLax");
-    var girlsSoc = $("#girlsSoc");
-    var girlsSoft = $("#girlsSoft");
-    var girlsTen = $("#girlsTen");
-    var girlsVol = $("#girlsVol");
-    var girlsWP = $("#girlsWP");
-    var sportsList = $("#sportsList");
-    var sportsArray = [boysBase, boysBask, boysXX, boysFoot, boysGolf, boysLax, boysSoc, boysTen, boysTNF, boysVol, boysWP, boysWre, girlsBask, girlsFH, girlsGolf, girlsLax, girlsSoc, girlsSoft, girlsTen, girlsVol, girlsWP];
+function createSportWidget(location){
+    console.log(location);
+    var sportsArray = ["boysBase", "boysBask","boysXX", "boysFoot", "boysGolf", "boysLax", "boysSoc","boysTen", "boysTNF", "boysVol", "boysWP", "boysWre", "girlsBask", "girlsFH", "girlsGolf", "girlsLax", "girlsSoc", "girlsSoft", "girlsTen", "girlsVol", "girlsWP"];
     var sportsArrayB = ["boys,baseball", "boys,basketball", "boys,crosscountry", "boys,football", "boys,golf", "boys,lacrosse", "boys,soccer", "boys,tennis", "boys,trackfield", "boys,volleyball", "boys,waterpolo", "boys,wrestling", "girls,basketball", "girls,fieldhockey", "girls,golf", "girls,lacrosse", "girls,soccer", "girls,softball", "girls,tennis", "girls,volleyball", "girls,waterpolo"];
-    sportsList.click(function(){
-        for(var i=0; i < sportsArray.length; i++){
+    var $widget = $("#widget");
+    var i=0;
+    var continueVar = true;
+    while(continueVar) {
+        console.log(i);
+        if(location == sportsArray[i]) {
+            continueVar = false;
+            console.log(sportsArrayB[i]);
+            $widget.prepend("<script type='text/javascript' >(function(d){var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];mp.type='text/javascript';mp.async=true;mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';h.appendChild(mp);})(document);</script> <a class='maxpreps-widget-link' data-width='500' data-height='600' data-item-count='10' data-type='wall' data-include-header='true' data-member-id='3680d111-54e5-495d-b7c2-53aecd7a6d41' data-allow-scrollbar='true' href='http://www.maxpreps.com/local/school/home.aspx?gendersport=" + sportsArrayB[i] + "&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'></a>");
+
+        }
+        i++
+    }
+}
+
+
+$(document).ready(function(){
+/*
+    var $boysBase = $("#boysBase");
+    var $boysBask = $("#boysBask");
+    var $boysXX = $("#boysXX");
+    var $boysFoot = $("#boysFoot");
+    var $boysGolf = $("#boysGolf");
+    var $boysLax = $("#boysLax");
+    var $boysSoc = $("#boysSoc");
+    var $boysTen = $("#boysTen");
+    var $boysTNF = $("#boysTNF");
+    var $boysVol = $("#boysVol");
+    var $boysWP = $("#boysWP");
+    var $boysWre = $("#boysWre");
+    var $girlsBask = $("#girlsBask");
+    var $girlsFH = $("#girlsFH");
+    var $girlsGolf = $("#girlsGolf");
+    var $girlsLax = $("#girlsLax");
+    var $girlsSoc = $("#girlsSoc");
+    var $girlsSoft = $("#girlsSoft");
+    var $girlsTen = $("#girlsTen");
+    var $girlsVol = $("#girlsVol");
+    var $girlsWP = $("#girlsWP");
+    var $sportsList = $("#sportsList");
+    var sportsArray = [$boysBase, $boysBask, $boysXX, $boysFoot, $boysGolf, $boysLax, $boysSoc, $boysTen, $boysTNF, $boysVol, $boysWP, $boysWre, $girlsBask, $girlsFH, $girlsGolf, $girlsLax, $girlsSoc, $girlsSoft, $girlsTen, $girlsVol, $girlsWP];
+    var sportsArrayB = ["boys,baseball", "boys,basketball", "boys,crosscountry", "boys,football", "boys,golf", "boys,lacrosse", "boys,soccer", "boys,tennis", "boys,trackfield", "boys,volleyball", "boys,waterpolo", "boys,wrestling", "girls,basketball", "girls,fieldhockey", "girls,golf", "girls,lacrosse", "girls,soccer", "girls,softball", "girls,tennis", "girls,volleyball", "girls,waterpolo"];
+    $sportsList.click(function(){
+        console.log("hi");
+        var i = 0;
+        while(i < sportsArray.length){
+            console.log(i);
             sportsArray[i].click(function(){
                 $("body").pagecontainer("change", "#sports2", {});
                 console.log(i);
                 console.log(sportsArrayB[i]);
-                document.getElementById("widget").href = "'http://www.maxpreps.com/local/school/home.aspx?gendersport='" + sportsArrayB[i] + "'&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'";
-            })
+                document.getElementById("widget").href = "http://www.maxpreps.com/local/school/home.aspx?gendersport=" + sportsArrayB[i] + "&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791";
+            });
+            i++
         }
     });
 
 
+*/
 
 
     //document.getElementById("widget").href = "'http://www.maxpreps.com/local/school/home.aspx?'" + ketanFunc() + "'schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'";
