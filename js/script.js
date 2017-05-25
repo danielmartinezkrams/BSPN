@@ -39,7 +39,34 @@ function signIn(){
     $submit.click(function () {
         var email = $("#txt-email-signin").val();
         var pass = $("#txt-password-signin").val();
-    })
+        $.getJSON("password.json", function(result){
+            $.each(result, function (key, value){
+                if(email == "value.username"){
+
+                }
+            });
+                // place message in error box
+                $('#error_box').html(data);
+
+                // if "Success" then redirect if you would like
+                if (data === 'Success!') {
+                    // window.location = 'some other page/website';
+                }
+            }
+        });
+        /*
+            if(email == "myuserid" && pass == "mypswrd") {
+                //window.open('target.html');
+
+
+            }
+            }
+            else
+            {
+                alert("Error Password or Username")
+            }
+        }
+        */
 }
 
 
