@@ -26,7 +26,7 @@ function createSportWidget(location){
             console.log(sportsArrayB[i]);
             $widget.empty();
             $widget.prepend("<script type='text/javascript' >(function(d){var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];mp.type='text/javascript';mp.async=true;mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';h.appendChild(mp);})(document);</script> <a class='maxpreps-widget-link' data-width='500' data-height='600' data-item-count='10' data-type='wall' data-include-header='true' data-member-id='3680d111-54e5-495d-b7c2-53aecd7a6d41' data-allow-scrollbar='true' href='http://www.maxpreps.com/local/school/home.aspx?gendersport=" + sportsArrayB[i] + "&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'></a>");
-
+            console.log("href='http://www.maxpreps.com/local/school/home.aspx?gendersport=" + sportsArrayB[i] + "&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'");
         }
         i++
     }
