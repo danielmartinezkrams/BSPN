@@ -26,67 +26,62 @@ function createSportWidget(location){
             console.log(sportsArrayB[i]);
             $widget.empty();
             $widget.prepend("<script type='text/javascript' >(function(d){var mp = d.createElement('script'),h=d.getElementsByTagName('head')[0];mp.type='text/javascript';mp.async=true;mp.src='http://www.maxpreps.com/includes/js/widget/widget.compressed.js';h.appendChild(mp);})(document);</script> <a class='maxpreps-widget-link' data-width='500' data-height='600' data-item-count='10' data-type='wall' data-include-header='true' data-member-id='3680d111-54e5-495d-b7c2-53aecd7a6d41' data-allow-scrollbar='true' href='http://www.maxpreps.com/local/school/home.aspx?gendersport=" + sportsArrayB[i] + "&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'></a>");
-            console.log("href='http://www.maxpreps.com/local/school/home.aspx?gendersport=" + sportsArrayB[i] + "&schoolid=6c68b5d2-1cab-449d-9140-bd7c8adb2791'");
+
         }
         i++
     }
 }
 
-        /*
-         // place message in error box
-         $('#error_box').html(data);
-
-         // if "Success" then redirect if you would like
-         if (data === 'Success!') {
-         // window.location = 'some other page/website';
-         }
-            if(email == "myuserid" && pass == "mypswrd") {
-                //window.open('target.html');
 
 
-            }
-            }
-            else
-            {
-                alert("Error Password or Username")
-            }
-        }
+function signIn(){
+
+}
 
 
 
 
 
-         $submit.click(function () {
-        */
 
 
 $(document).ready(function(){
 
-    var $signInSubmit = $("#signInSubmit");
-    $signInSubmit.click(function () {
-        var email = $("#txt-email-signin").val();
-        var pass = $("#txt-password-signin").val();
-        $.getJSON("password.json", function(result){
-            console.log(result);
-            $.each(result, function (key, value){
-                console.log("key: " + key);
-                console.log(value);
-                if(email == value.email && pass==value.password){
-                    console.log("email: " + value.email + ", pass: " + value.password);
-                }
 
-            });
-        });
-    });
 
-    var $signUpSubmit = $("#signUpSubmit");
-    $signUpSubmit.click(function(){
 
-    });
+
+
 
 
 
 /*
+ var $submit = $("#signInSubmit");
+ $submit.click(function () {
+ var email = $("#txt-email-signin").val();
+ var pass = $("#txt-password-signin").val();
+ $.getJSON("password.json", function(result){
+ $.each(result, function(key, value){
+ if(email == value.email){
+
+ }
+ })
+ })
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     var $boysBase = $("#boysBase");
     var $boysBask = $("#boysBask");
     var $boysXX = $("#boysXX");
