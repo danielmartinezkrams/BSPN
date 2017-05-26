@@ -61,7 +61,6 @@ $(document).ready(function(){
                 authorized = true
             }
             else{
-                $("#signIn").append("<div data-role='popup' id='dlg-invalid-credentials' data-dismissible='false' style='max-width:400px;'><div role='main' class='ui-content'><h3 class='mc-text-danger'>Login Failed</h3> <p>Did you enter the right credentials?</p> <div class='mc-text-center'><a href='#' data-rel='back' class='ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5'>OK</a></div></div></div>")
 
             }
         }
@@ -69,17 +68,6 @@ $(document).ready(function(){
 
 
     });
-
-
-
-
-
-
-
-
-
-
-
 });
 
 
