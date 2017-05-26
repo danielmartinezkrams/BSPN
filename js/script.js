@@ -20,7 +20,7 @@ function createSportWidget(location){
     var i=0;
     var continueVar = true;
     while(continueVar) {
-        console.log(i);
+        console.log(i);5
         if(location == sportsArray[i]) {
             continueVar = false;
             console.log(sportsArrayB[i]);
