@@ -37,6 +37,7 @@ function loadData() {
             "lastName": "lastName3"
         }];
 
+
     setData(data, "password");
 
     //console.log(getData("password"));
@@ -68,6 +69,18 @@ $(document).ready(function(){
 
 
     });
+
+    var $signUpSubmit = $("#signUpSubmit");
+    $signUpSubmit.click(function () {
+        loadData();
+    })
+
+
+
+
+
+
+
 });
 
 
