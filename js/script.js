@@ -32,29 +32,14 @@ function createSportWidget(location){
     }
 }
 
-
-
-function signIn(){
-    var $submit = $("#signInSubmit");
-    $submit.click(function () {
-        var email = $("#txt-email-signin").val();
-        var pass = $("#txt-password-signin").val();
-        $.getJSON("password.json", function(result){
-            $.each(result, function (key, value){
-                if(email == "value.username"){
-
-                }
-            });
-                // place message in error box
-                $('#error_box').html(data);
-
-                // if "Success" then redirect if you would like
-                if (data === 'Success!') {
-                    // window.location = 'some other page/website';
-                }
-            }
-        });
         /*
+         // place message in error box
+         $('#error_box').html(data);
+
+         // if "Success" then redirect if you would like
+         if (data === 'Success!') {
+         // window.location = 'some other page/website';
+         }
             if(email == "myuserid" && pass == "mypswrd") {
                 //window.open('target.html');
 
@@ -66,16 +51,41 @@ function signIn(){
                 alert("Error Password or Username")
             }
         }
+
+
+
+
+
+         $submit.click(function () {
         */
-}
-
-
-
-
-
 
 
 $(document).ready(function(){
+
+    var $signInSubmit = $("#signInSubmit");
+    $signInSubmit.click(function () {
+        var email = $("#txt-email-signin").val();
+        var pass = $("#txt-password-signin").val();
+        $.getJSON("password.json", function(result){
+            console.log(result);
+            $.each(result, function (key, value){
+                console.log("key: " + key);
+                console.log(value);
+                if(email == value.email && pass==value.password){
+                    console.log("email: " + value.email + ", pass: " + value.password);
+                }
+
+            });
+        });
+    });
+
+    var $signUpSubmit = $("#signUpSubmit");
+    $signUpSubmit.click(function(){
+
+    });
+
+
+
 /*
     var $boysBase = $("#boysBase");
     var $boysBask = $("#boysBask");
