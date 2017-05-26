@@ -5,13 +5,13 @@ body{
 
 @font-face {
     font-family: "My Custom Font";
-    src: url(fonts/esp_bdit.ttf) format("truetype");
+    src: url(fonts/esp_ital.ttf) format("truetype");
 }
 
-h1.customfont {
+p.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
-    font-size: 100px;
-    color: red;
+    font-size: 50pt;
+    color: white;
 }
 
 h3{
@@ -27,10 +27,10 @@ h3{
 }
 
 .bhsLogo{
-    height: 100px;
-    width: 125px;
+    height: 150px;
+    width: 175px;
     position: relative;
-    top: -10px;
+    top: -80px;
 }
 
 form {
@@ -118,4 +118,8 @@ span.psw {
     position: absolute;
     top: 25%;
     left: 10%;
+}
+
+#pageHeader{
+    background-color: red;
 }
