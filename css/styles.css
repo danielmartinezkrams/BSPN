@@ -149,3 +149,27 @@ span.psw {
     background-color: gold;
     border-color: darkgoldenrod;
 }
+
+#pageFooter{
+    background-color: red;
+}
+
+#homeButton{
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
+
+#favoritesButton{
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
+
+#sportsButton{
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
+
+#newsButton{
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
