@@ -108,6 +108,8 @@ function ketanFunc(){
                 }
             }
         }
+    }
+
 
         var tweets = [];
         var authors = [];
