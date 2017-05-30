@@ -20,7 +20,7 @@ function createSportWidget(location){
     var i=0;
     var continueVar = true;
     while(continueVar) {
-        console.log(i);5
+        console.log(i);
         if(location == sportsArray[i]) {
             continueVar = false;
             console.log(sportsArrayB[i]);
@@ -55,18 +55,7 @@ $(document).ready(function(){
 
 
 /*
- var $submit = $("#signInSubmit");
- $submit.click(function () {
- var email = $("#txt-email-signin").val();
- var pass = $("#txt-password-signin").val();
- $.getJSON("password.json", function(result){
- $.each(result, function(key, value){
- if(email == value.email){
 
- }
- })
- })
- });
 
 
 

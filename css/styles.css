@@ -173,3 +173,5 @@ span.psw {
     background-color: gold;
     border-color: darkgoldenrod;
 }
+
+/* all of those buttons are the same values so you can make it a class isntead */
