@@ -35,16 +35,26 @@ function createSportWidget(location){
 
 
 function signIn(){
+    function extractImageUrl(image_data) {
+        if (image_data !== undefined && image_data.innerHTML.indexOf('data-srcset') >= 0) {
+            var data_src = image_data.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0];
+            return decodeURIComponent(data_src).split('"')[1];
+        }
+
+}
+
+
+
+function ketanFunc(){
 
 }
 
 
 
 
-
-
-
 $(document).ready(function(){
+
+
 
 
 
@@ -204,11 +214,7 @@ $(document).ready(function(){
             return a;
         }
 
-        function extractImageUrl(image_data) {
-            if (image_data !== undefined && image_data.innerHTML.indexOf('data-srcset') >= 0) {
-                var data_src = image_data.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0];
-                return decodeURIComponent(data_src).split('"')[1];
-            }
+
         }
         var twitterFetcher = {
             fetch: function(config) {
@@ -506,11 +512,7 @@ $(document).ready(function(){
 */
 });
 
-function ketanFunc() {
 
-
-
-}
 
 function pageChanger(to){
     $("body").pagecontainer("change", "#" + to, {});
