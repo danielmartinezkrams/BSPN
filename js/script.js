@@ -40,6 +40,64 @@ function signIn(){
             var data_src = image_data.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0];
             return decodeURIComponent(data_src).split('"')[1];
         }
+        var twitterFetcher = {
+            fetch: function(config) {
+                if (config.maxTweets === undefined) {
+                    config.maxTweets = 20;
+                }
+                if (config.enableLinks === undefined) {
+                    config.enableLinks = true;
+                }
+                if (config.showUser === undefined) {
+                    config.showUser = true;
+                }
+                if (config.showTime === undefined) {
+                    config.showTime = true;
+                }
+                if (config.dateFunction === undefined) {
+                    config.dateFunction = 'default';
+                }
+                if (config.showRetweet === undefined) {
+                    config.showRetweet = true;
+                }
+                if (config.customCallback === undefined) {
+                    config.customCallback = null;
+                }
+                if (config.showInteraction === undefined) {
+                    config.showInteraction = true;
+                }
+                if (config.showImages === undefined) {
+                    config.showImages = false;
+                }
+                if (config.linksInNewWindow === undefined) {
+                    config.linksInNewWindow = true;
+                }
+                if (config.showPermalinks === undefined) {
+                    config.showPermalinks = true;
+                }
+                if (config.dataOnly === undefined) {
+                    config.dataOnly = false;
+                }
+                if (inProgress) {
+                    queue.push(config);
+                } else {
+                    inProgress = true;
+                    domNode = config.domId;
+                    maxTweets = config.maxTweets;
+                    parseLinks = config.enableLinks;
+                    printUser = config.showUser;
+                    printTime = config.showTime;
+                    showRts = config.showRetweet;
+                    formatterFunction = config.dateFunction;
+                    customCallbackFunction = config.customCallback;
+                    showInteractionLinks = config.showInteraction;
+                    showImages = config.showImages;
+                    targetBlank = config.linksInNewWindow;
+                    permalinks = config.showPermalinks;
+                    dataOnly = config.dataOnly;
+                    var head = document.getElementsByTagName('head')[0];
+                    if (script !== null) {
+                        head.removeChild(script);
 
 }
 
@@ -216,64 +274,7 @@ $(document).ready(function(){
 
 
         }
-        var twitterFetcher = {
-            fetch: function(config) {
-                if (config.maxTweets === undefined) {
-                    config.maxTweets = 20;
-                }
-                if (config.enableLinks === undefined) {
-                    config.enableLinks = true;
-                }
-                if (config.showUser === undefined) {
-                    config.showUser = true;
-                }
-                if (config.showTime === undefined) {
-                    config.showTime = true;
-                }
-                if (config.dateFunction === undefined) {
-                    config.dateFunction = 'default';
-                }
-                if (config.showRetweet === undefined) {
-                    config.showRetweet = true;
-                }
-                if (config.customCallback === undefined) {
-                    config.customCallback = null;
-                }
-                if (config.showInteraction === undefined) {
-                    config.showInteraction = true;
-                }
-                if (config.showImages === undefined) {
-                    config.showImages = false;
-                }
-                if (config.linksInNewWindow === undefined) {
-                    config.linksInNewWindow = true;
-                }
-                if (config.showPermalinks === undefined) {
-                    config.showPermalinks = true;
-                }
-                if (config.dataOnly === undefined) {
-                    config.dataOnly = false;
-                }
-                if (inProgress) {
-                    queue.push(config);
-                } else {
-                    inProgress = true;
-                    domNode = config.domId;
-                    maxTweets = config.maxTweets;
-                    parseLinks = config.enableLinks;
-                    printUser = config.showUser;
-                    printTime = config.showTime;
-                    showRts = config.showRetweet;
-                    formatterFunction = config.dateFunction;
-                    customCallbackFunction = config.customCallback;
-                    showInteractionLinks = config.showInteraction;
-                    showImages = config.showImages;
-                    targetBlank = config.linksInNewWindow;
-                    permalinks = config.showPermalinks;
-                    dataOnly = config.dataOnly;
-                    var head = document.getElementsByTagName('head')[0];
-                    if (script !== null) {
-                        head.removeChild(script);
+
                     }
                     script = document.createElement('script');
                     script.type = 'text/javascript';
