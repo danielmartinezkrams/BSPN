@@ -10,7 +10,7 @@ body{
 
 p.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
-    font-size: 50pt;
+    font-size: 30pt;
     color: white;
 }
 
@@ -27,10 +27,10 @@ h3{
 }
 
 .bhsLogo{
-    height: 150px;
-    width: 175px;
+    height: 125px;
+    width: 150px;
     position: relative;
-    top: -80px;
+    top: -30px;
 }
 
 form {
@@ -174,4 +174,13 @@ span.psw {
     border-color: darkgoldenrod;
 }
 
+#optionsButton{
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
+
+#backButton{
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
 /* all of those buttons are the same values so you can make it a class isntead */
