@@ -6,6 +6,8 @@
 
 //this will save an array of objects to a local storage
 function setData(array, name) {
+    console.log(array);
+    console.log(name);
     var json = JSON.stringify(array);
     localStorage.setItem(name, json);
 }
@@ -46,14 +48,16 @@ function loadData() {
 
 
 $(document).ready(function(){
+    loadData();
+    var passwordData = getData("password");
+    console.log(passwordData);
 
     var authorized = false;
     var $signInSubmit = $("#signInSubmit");
     $signInSubmit.click(function () {
-        loadData();
-        var passwordData = getData("password");
         console.log(passwordData);
-        //test for correect login
+
+        //test for correct login
         var email = $("#txt-email-signin").val();
         var pass = $("#txt-password-signin").val();
         var l = 0;
@@ -81,11 +85,7 @@ $(document).ready(function(){
     var $signUpSubmit = $("#signUpSubmit");
     $signUpSubmit.click(function () {
         console.log("sign Up");
-        loadData();
-
-        var passwordData = getData("password");
         console.log(passwordData);
-
         var firstName = $("#txt-first-name").val();
         var lastName = $("#txt-last-name").val();
         var email = $("#txt-email-signup").val();
@@ -100,13 +100,13 @@ $(document).ready(function(){
 
 
         if(password == passwordConfirm){
-            passwordData.push({
+
+            setData({
                 "email": email,
                 "firstName": firstName,
                 "password": password,
                 "lastName": lastName
-            });
-            setData(passwordData, "password");
+            }, "password");
             var $signUpSent = $("#dlg-sign-up-sent");
             var $congratulationsMessage = $("#congratulationsMessage");
             $congratulationsMessage.html(firstName + ", welcome to BSPN!");
