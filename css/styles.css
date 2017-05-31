@@ -12,6 +12,8 @@ p.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
     font-size: 30pt;
     color: white;
+    position: relative;
+    top: 150px;
 }
 
 h3{
@@ -27,10 +29,10 @@ h3{
 }
 
 .bhsLogo{
-    height: 125px;
-    width: 150px;
+    height: 150px;
+    width: 175px;
     position: relative;
-    top: -30px;
+    top: -90px;
 }
 
 form {
