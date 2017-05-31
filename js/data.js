@@ -6,8 +6,7 @@
 
 //this will save an array of objects to a local storage
 function setData(array, name) {
-    console.log(array);
-    console.log(name);
+    console.log("array:" + array);
     var json = JSON.stringify(array);
     localStorage.setItem(name, json);
 }
@@ -15,6 +14,7 @@ function setData(array, name) {
 //this retrieves data from local storage
 function getData(name) {
     var text = localStorage.getItem(name);
+    console.log(text);
     return JSON.parse(text);
 
 }
@@ -42,19 +42,33 @@ function loadData() {
 
     setData(data, "password");
 
-    //console.log(getData("password"));
+    console.log(getData("password"));
 
 }
+
+function createId(){
+
+}
+
+function Character(firstName, lastName, email, password){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.password = password;
+    this.id = createId()
+}
+
 
 
 $(document).ready(function(){
     loadData();
-    var passwordData = getData("password");
+    passwordData = getData("password");
     console.log(passwordData);
 
     var authorized = false;
     var $signInSubmit = $("#signInSubmit");
     $signInSubmit.click(function () {
+        passwordData = getData("password");
         console.log(passwordData);
 
         //test for correct login
@@ -84,6 +98,7 @@ $(document).ready(function(){
 
     var $signUpSubmit = $("#signUpSubmit");
     $signUpSubmit.click(function () {
+        passwordData = getData("password");
         console.log("sign Up");
         console.log(passwordData);
         var firstName = $("#txt-first-name").val();
@@ -100,16 +115,18 @@ $(document).ready(function(){
 
 
         if(password == passwordConfirm){
-
-            setData({
+            character = new Character(firstName, lastName, email, password);
+            passwordData.push({
                 "email": email,
                 "firstName": firstName,
                 "password": password,
                 "lastName": lastName
-            }, "password");
+            });
+            setData(passwordData, "password");
+            console.log(getData("password"));
             var $signUpSent = $("#dlg-sign-up-sent");
             var $congratulationsMessage = $("#congratulationsMessage");
-            $congratulationsMessage.html(firstName + ", welcome to BSPN!");
+            $congratulationsMessage.html(character.firstName + ", welcome to BSPN!");
             $signUpSent.popup("open");
             authorized = true;
         }
