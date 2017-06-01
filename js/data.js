@@ -133,7 +133,7 @@ $(document).ready(function(){
         if (firstName == '' || lastName == '' || email == '' || password == '' || passwordConfirm == '') {
             alert("Please fill all fields...!!!!!!");
         }
-        else if (!(password).match(cpassword)) {
+        else if (!(password).match(passwordConfirm)) {
             alert("Your passwords don't match. Try again?");
         }
         else {
@@ -142,7 +142,7 @@ $(document).ready(function(){
                 lastName1: lastName,
                 email1: email,
                 password1: password
-            }
+            })
 
         }
 
