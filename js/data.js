@@ -6,7 +6,7 @@
 
 //this will save an array of objects to a local storage
 function setData(array, name) {
-    console.log("array:" + array);
+    //console.log("array:" + array);
     var json = JSON.stringify(array);
     localStorage.setItem(name, json);
 }
@@ -14,7 +14,7 @@ function setData(array, name) {
 //this retrieves data from local storage
 function getData(name) {
     var text = localStorage.getItem(name);
-    console.log(text);
+    //console.log(text);
     return JSON.parse(text);
 
 }
@@ -42,7 +42,7 @@ function loadData() {
 
     setData(data, "password");
 
-    console.log(getData("password"));
+    //console.log(getData("password"));
 
 }
 
@@ -63,31 +63,31 @@ function Character(firstName, lastName, email, password){
 $(document).ready(function(){
     loadData();
     passwordData = getData("password");
-    console.log(passwordData);
+    //console.log(passwordData);
 
     var authorized = false;
     var $signInSubmit = $("#signInSubmit");
     $signInSubmit.click(function () {
         passwordData = getData("password");
-        console.log(passwordData);
+        //console.log(passwordData);
 
         //test for correct login
         var email = $("#txt-email-signin").val();
         var pass = $("#txt-password-signin").val();
         var l = 0;
         while(l < passwordData.length){
-            console.log(l);
+            //console.log(l);
             if(email == passwordData[l].email && pass == passwordData[l].password){
                 l = passwordData.length + 1;
                 authorized = true;
-                console.log(authorized);
+                //console.log(authorized);
             }
             else{
                 l++
             }
         }
         if(!authorized){
-            console.log("fail");
+            //console.log("fail");
             var dlgInvalidCredentials = $("#dlg-invalid-credentials");
             dlgInvalidCredentials.popup("open");
         }
@@ -99,19 +99,19 @@ $(document).ready(function(){
     var $signUpSubmit = $("#signUpSubmit");
     $signUpSubmit.click(function () {
         passwordData = getData("password");
-        console.log("sign Up");
-        console.log(passwordData);
+        //console.log("sign Up");
+        //console.log(passwordData);
         var firstName = $("#txt-first-name").val();
         var lastName = $("#txt-last-name").val();
         var email = $("#txt-email-signup").val();
         var password = $("#txt-password-signup").val();
         var passwordConfirm = $("#txt-password-confirm").val();
 
-        console.log(firstName);
-        console.log(lastName);
-        console.log(email);
-        console.log(password);
-        console.log(passwordConfirm);
+        //console.log(firstName);
+        //console.log(lastName);
+        //console.log(email);
+        //console.log(password);
+        //console.log(passwordConfirm);
 
 
         if(password == passwordConfirm){
@@ -123,7 +123,7 @@ $(document).ready(function(){
                 "lastName": lastName
             });
             setData(passwordData, "password");
-            console.log(getData("password"));
+            //console.log(getData("password"));
             var $signUpSent = $("#dlg-sign-up-sent");
             var $congratulationsMessage = $("#congratulationsMessage");
             $congratulationsMessage.html(character.firstName + ", welcome to BSPN!");

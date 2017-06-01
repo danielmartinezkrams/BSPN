@@ -454,8 +454,8 @@ function gitFunc() {
         }
 
         $(document).ready( function() {
-            $("#myButton").click(function () {
-                var word = document.getElementById("basic").value;
+           // $("#myButton").click(function () {
+                var word = "BHSjacketSports";//document.getElementById("basic").value;
                 var configProfile = {
                     "profile": {"screenName": word},
                     "domId": 'example1',
@@ -470,7 +470,7 @@ function gitFunc() {
                     "lang": 'en'
                 };
 
-                $("body").pagecontainer("change", "#page2", { transition: "fade"});
+               // $("body").pagecontainer("change", "#page2", { transition: "fade"});
 
                 twitterFetcher.fetch(configProfile);
                 console.log(allTweetText);
@@ -478,7 +478,7 @@ function gitFunc() {
                 setTimeout(function(){ToneAnalizer(allTweetText)}, 1500);
                 console.log(texts)
 
-            });
+           // });
         });
 
 
