@@ -130,9 +130,20 @@ $(document).ready(function(){
             $signUpSent.popup("open");
             authorized = true;
         }
-        else{
-            $('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
-            alert(data);
+        if (firstName == '' || lastName == '' || email == '' || password == '' || passwordConfirm == '') {
+            alert("Please fill all fields...!!!!!!");
+        }
+        else if (!(password).match(cpassword)) {
+            alert("Your passwords don't match. Try again?");
+        }
+        else {
+            $.post("$signUpSubmit.php", {
+                firstName1: firstName,
+                lastName1: lastName,
+                email1: email,
+                password1: password
+            }
+
         }
 
 
