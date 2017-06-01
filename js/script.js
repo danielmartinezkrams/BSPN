@@ -76,6 +76,8 @@ function createSportWidget(location){
 
 
 function gitFunc() {
+    console.log("I love you Ketan!");
+    console.log("No fat bitches");
     var allTweetText = [];
 
     var texts = "";
@@ -117,14 +119,14 @@ function gitFunc() {
             if (customCallbackFunction === null) {
                 var x = tweets.length;
                 var n = 0;
-                var element = document.getElementById(domNode);
+                var $element = $("#twitterFeed");
                 var html = '<ul>';
                 while (n < x) {
                     html += '<li>' + tweets[n] + '</li>';
                     n++;
                 }
                 html += '</ul>';
-                element.innerHTML = html;
+                $element.html(html)
             } else {
                 customCallbackFunction(tweets);
             }

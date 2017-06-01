@@ -131,7 +131,8 @@ $(document).ready(function(){
             authorized = true;
         }
         else{
-
+            $('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
+            alert(data);
         }
 
 
