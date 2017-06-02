@@ -3,14 +3,9 @@
  */
 
 
-
-
 var allTweetText = [];
 
 var texts = "";
-
-
-
 
 var word = '';
 (function(root, factory) {
@@ -47,7 +42,7 @@ var word = '';
             var x = tweets.length;
             var n = 0;
             var $twitterFeed = $("#twitterFeed");
-            var html = '<ul>';
+            var html = '<ul data-role="listview">';
             while (n < x) {
                 html += '<li>' + tweets[n] + '</li>';
                 n++;
@@ -205,54 +200,54 @@ var word = '';
             var rts = [];
             var tids = [];
             var permalinksURL = [];
-            var x = 0;
+            var j = 0;
             if (supportsClassName) {
                 var tmp = div.getElementsByClassName('timeline-Tweet');
-                while (x < tmp.length) {
-                    if (tmp[x].getElementsByClassName('timeline-Tweet-retweetCredit').length > 0) {
+                while (j < tmp.length) {
+                    if (tmp[j].getElementsByClassName('timeline-Tweet-retweetCredit').length > 0) {
                         rts.push(true);
                     } else {
                         rts.push(false);
                     }
-                    if (!rts[x] || rts[x] && showRts) {
-                        tweets.push(tmp[x].getElementsByClassName('timeline-Tweet-text')[0]);
-                        tids.push(tmp[x].getAttribute('data-tweet-id'));
+                    if (!rts[j] || rts[j] && showRts) {
+                        tweets.push(tmp[j].getElementsByClassName('timeline-Tweet-text')[0]);
+                        tids.push(tmp[j].getAttribute('data-tweet-id'));
                         if (printUser) {
-                            authors.push(swapDataSrc(tmp[x].getElementsByClassName('timeline-Tweet-author')[0]));
+                            authors.push(swapDataSrc(tmp[j].getElementsByClassName('timeline-Tweet-author')[0]));
                         }
-                        times.push(tmp[x].getElementsByClassName('dt-updated')[0]);
-                        permalinksURL.push(tmp[x].getElementsByClassName('timeline-Tweet-timestamp')[0]);
-                        if (tmp[x].getElementsByClassName('timeline-Tweet-media')[0] !== undefined) {
-                            images.push(tmp[x].getElementsByClassName('timeline-Tweet-media')[0]);
+                        times.push(tmp[j].getElementsByClassName('dt-updated')[0]);
+                        permalinksURL.push(tmp[j].getElementsByClassName('timeline-Tweet-timestamp')[0]);
+                        if (tmp[j].getElementsByClassName('timeline-Tweet-media')[0] !== undefined) {
+                            images.push(tmp[j].getElementsByClassName('timeline-Tweet-media')[0]);
                         } else {
                             images.push(undefined);
                         }
                     }
-                    x++;
+                    j++;
                 }
             } else {
-                var tmp = getElementsByClassName(div, 'timeline-Tweet');
-                while (x < tmp.length) {
-                    if (getElementsByClassName(tmp[x], 'timeline-Tweet-retweetCredit').length > 0) {
+                var tt = getElementsByClassName(div, 'timeline-Tweet');
+                while (j < tt.length) {
+                    if (getElementsByClassName(tt[j], 'timeline-Tweet-retweetCredit').length > 0) {
                         rts.push(true);
                     } else {
                         rts.push(false);
                     }
-                    if (!rts[x] || rts[x] && showRts) {
-                        tweets.push(getElementsByClassName(tmp[x], 'timeline-Tweet-text')[0]);
-                        tids.push(tmp[x].getAttribute('data-tweet-id'));
+                    if (!rts[j] || rts[j] && showRts) {
+                        tweets.push(getElementsByClassName(tt[j], 'timeline-Tweet-text')[0]);
+                        tids.push(tt[j].getAttribute('data-tweet-id'));
                         if (printUser) {
-                            authors.push(swapDataSrc(getElementsByClassName(tmp[x], 'timeline-Tweet-author')[0]));
+                            authors.push(swapDataSrc(getElementsByClassName(tt[j], 'timeline-Tweet-author')[0]));
                         }
-                        times.push(getElementsByClassName(tmp[x], 'dt-updated')[0]);
-                        permalinksURL.push(getElementsByClassName(tmp[x], 'timeline-Tweet-timestamp')[0]);
-                        if (getElementsByClassName(tmp[x], 'timeline-Tweet-media')[0] !== undefined) {
-                            images.push(getElementsByClassName(tmp[x], 'timeline-Tweet-media')[0]);
+                        times.push(getElementsByClassName(tt[j], 'dt-updated')[0]);
+                        permalinksURL.push(getElementsByClassName(tt[j], 'timeline-Tweet-timestamp')[0]);
+                        if (getElementsByClassName(tt[j], 'timeline-Tweet-media')[0] !== undefined) {
+                            images.push(getElementsByClassName(tt[j], 'timeline-Tweet-media')[0]);
                         } else {
                             images.push(undefined);
                         }
                     }
-                    x++;
+                    j++;
                 }
             }
             if (tweets.length > maxTweets) {
@@ -264,10 +259,10 @@ var word = '';
                 permalinksURL.splice(maxTweets, (permalinksURL.length - maxTweets));
             }
             var arrayTweets = [];
-            var x = tweets.length;
+            var length = tweets.length;
             var n = 0;
             if (dataOnly) {
-                while (n < x) {
+                while (n < length) {
                     console.log(times[n].textContent);
                     arrayTweets.push({
                         tweet: tweets[n].innerHTML,
@@ -283,7 +278,7 @@ var word = '';
                     n++;
                 }
             } else {
-                while (n < x) {
+                while (n < length) {
                     if (typeof(formatterFunction) !== 'string') {
                         var datetimeText = times[n].getAttribute('datetime');
                         var newDate = new Date(times[n].getAttribute('datetime').replace(/-/g, '/').replace('T', ' ').split('+')[0]);
@@ -313,8 +308,8 @@ var word = '';
                         }
                         if (printUser) {
                             // console.log(tweets[n].textContent)
-                            allTweetText.push(tweets[n].textContent)
-                            texts = texts + tweets[n].textContent +"%2C"
+                            allTweetText.push(tweets[n].textContent);
+                            texts = texts + tweets[n].textContent +"%2C";
                             op += '<div class="user">' + strip(authors[n].innerHTML) + '</div>';
                         }
                         op += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';
@@ -332,7 +327,7 @@ var word = '';
                                 op += '<p class="user">' + authors[n].textContent + '</p>';
                             }
                             op += '<p class="tweet">' + tweets[n].textContent + '</p>';
-                            console.log(tweets[n].textContent)
+                            console.log(tweets[n].textContent);
                             if (printTime) {
                                 op += '<p class="timePosted">' + times[n].textContent + '</p>';
                             }
@@ -375,7 +370,7 @@ var word = '';
     };
     window.__twttrf = twitterFetcher;
     window.twitterFetcher = twitterFetcher;
-    console.log(allTweetText)
+    console.log(allTweetText);
     return twitterFetcher;
 
 }));
