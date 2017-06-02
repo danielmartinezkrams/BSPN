@@ -124,6 +124,10 @@ span.psw {
     left: 10%;
 }
 
+.ui-link{
+    font-size: 20pt;
+}
+
 #pageHeader{
     background-color: red;
 }
@@ -156,26 +160,6 @@ span.psw {
 
 #pageFooter{
     background-color: red;
-}
-
-#homeButton{
-    background-color: gold;
-    border-color: darkgoldenrod;
-}
-
-#favoritesButton{
-    background-color: gold;
-    border-color: darkgoldenrod;
-}
-
-#sportsButton{
-    background-color: gold;
-    border-color: darkgoldenrod;
-}
-
-#newsButton{
-    background-color: gold;
-    border-color: darkgoldenrod;
 }
 
 #optionsButton{
