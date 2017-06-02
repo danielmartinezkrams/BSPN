@@ -10,7 +10,6 @@ function setData(array, name) {
     var json = JSON.stringify(array);
     localStorage.setItem(name, json);
 }
-
 //this retrieves data from local storage
 function getData(name) {
     var text = localStorage.getItem(name);
@@ -18,7 +17,6 @@ function getData(name) {
     return JSON.parse(text);
 
 }
-
 function loadData() {
     var data = [{
         "email": "albinson@thing.com",
@@ -38,18 +36,12 @@ function loadData() {
             "firstName": "name3",
             "lastName": "lastName3"
         }];
-
-
     setData(data, "password");
-
     //console.log(getData("password"));
-
 }
-
 function createId(){
-
+    return 1
 }
-
 function Character(firstName, lastName, email, password){
     this.firstName = firstName;
     this.lastName = lastName;
@@ -57,20 +49,15 @@ function Character(firstName, lastName, email, password){
     this.password = password;
     this.id = createId()
 }
-
-
-
 $(document).ready(function(){
     loadData();
     passwordData = getData("password");
     //console.log(passwordData);
-
     var authorized = false;
     var $signInSubmit = $("#signInSubmit");
     $signInSubmit.click(function () {
         passwordData = getData("password");
         //console.log(passwordData);
-
         //test for correct login
         var email = $("#txt-email-signin").val();
         var pass = $("#txt-password-signin").val();
@@ -91,11 +78,7 @@ $(document).ready(function(){
             var dlgInvalidCredentials = $("#dlg-invalid-credentials");
             dlgInvalidCredentials.popup("open");
         }
-
-
-
     });
-
     var $signUpSubmit = $("#signUpSubmit");
     $signUpSubmit.click(function () {
         passwordData = getData("password");
@@ -106,14 +89,11 @@ $(document).ready(function(){
         var email = $("#txt-email-signup").val();
         var password = $("#txt-password-signup").val();
         var passwordConfirm = $("#txt-password-confirm").val();
-
         //console.log(firstName);
         //console.log(lastName);
         //console.log(email);
         //console.log(password);
         //console.log(passwordConfirm);
-
-
         if(password == passwordConfirm){
             character = new Character(firstName, lastName, email, password);
             passwordData.push({
@@ -143,14 +123,8 @@ $(document).ready(function(){
                 email1: email,
                 password1: password
             })
-
         }
-
-
     });
-
-
-
 });
 
 
