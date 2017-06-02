@@ -41,14 +41,15 @@ var word = '';
         if (customCallbackFunction === null) {
             var x = tweets.length;
             var n = 0;
-            var $twitterFeed = $("#twitterFeed");
+            var $twitterList = $("#twitterList");
             var html = '<ul data-role="listview">';
+            var placeHolder = "";
             while (n < x) {
-                html += '<li>' + tweets[n] + '</li>';
+                placeHolder += '<li>' + tweets[n] + '</li>';
                 n++;
             }
             html += '</ul>';
-            $twitterFeed.html(html);
+            $twitterList.html(placeHolder);
         } else {
             customCallbackFunction(tweets);
         }
@@ -298,7 +299,14 @@ var word = '';
                             times[n].textContent = dateString;
                         }
                     }
-                    var op = '';
+                    console.log(tweets);
+                    console.log(authors);
+                    console.log(times);
+                    console.log(images);
+                    console.log(rts);
+                    console.log(tids);
+                    console.log(permalinksURL);
+                    var displayTweet = '';
                     if (parseLinks) {
                         if (targetBlank) {
                             targetLinksToNewWindow(tweets[n]);
@@ -308,53 +316,52 @@ var word = '';
                         }
                         if (printUser) {
                             // console.log(tweets[n].textContent)
+                            //console.log(strip(authors[n].innerHTML));
                             allTweetText.push(tweets[n].textContent);
-                            texts = texts + tweets[n].textContent +"%2C";
-                            op += '<div class="user">' + strip(authors[n].innerHTML) + '</div>';
+                            texts += tweets[n].textContent +"%2C";
+                            displayTweet += '<div class="user">' + strip(authors[n].innerHTML) + '</div>';
                         }
-                        op += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';
+                        displayTweet += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';
                         if (printTime) {
                             if (permalinks) {
-                                op += '<p class="timePosted"><a href="' + permalinksURL[n] + '">' + times[n].getAttribute('aria-label') + '</a></p>';
+                                displayTweet += '<p class="timePosted"><a href="' + permalinksURL[n] + '">' + times[n].getAttribute('aria-label') + '</a></p>';
                             } else {
-                                op += '<p class="timePosted">' +
+                                displayTweet += '<p class="timePosted">' +
                                     times[n].getAttribute('aria-label') + '</p>';
                             }
                         }
                     } else {
                         if (tweets[n].textContent) {
                             if (printUser) {
-                                op += '<p class="user">' + authors[n].textContent + '</p>';
+                                displayTweet += '<p class="user">' + authors[n].textContent + '</p>';
                             }
-                            op += '<p class="tweet">' + tweets[n].textContent + '</p>';
+                            displayTweet += '<p class="tweet">' + tweets[n].textContent + '</p>';
                             console.log(tweets[n].textContent);
                             if (printTime) {
-                                op += '<p class="timePosted">' + times[n].textContent + '</p>';
+                                displayTweet += '<p class="timePosted">' + times[n].textContent + '</p>';
                             }
                         } else {
                             if (printUser) {
-                                op += '<p class="user">' + authors[n].textContent + '</p>';
+                                displayTweet += '<p class="user">' + authors[n].textContent + '</p>';
                             }
-                            op += '<p class="tweet">' + tweets[n].textContent + '</p>';
+                            displayTweet += '<p class="tweet">' + tweets[n].textContent + '</p>';
                             if (printTime) {
-                                op += '<p class="timePosted">' + times[n].textContent + '</p>';
+                                displayTweet += '<p class="timePosted">' + times[n].textContent + '</p>';
                             }
                         }
                     }
                     if (showInteractionLinks) {
-                        op += '<p class="interact"><a href="https://twitter.com/intent/' + 'tweet?in_reply_to=' + tids[n] + '" class="twitter_reply_icon"' +
-                            (targetBlank ? ' target="_blank">' : '>') + 'Reply</a><a href="https://twitter.com/intent/retweet?' + 'tweet_id=' + tids[n] + '" class="twitter_retweet_icon"' +
-                            (targetBlank ? ' target="_blank">' : '>') + 'Retweet</a>' + '<a href="https://twitter.com/intent/favorite?tweet_id=' +
-                            tids[n] + '" class="twitter_fav_icon"' +
-                            (targetBlank ? ' target="_blank">' : '>') + 'Favorite</a></p>';
+                        displayTweet += '<p class="interact"><a href="https://twitter.com/intent/' + 'tweet?in_reply_to=' + tids[n] + '" class="twitter_reply_icon"' + (targetBlank ? ' target="_blank">' : '>') + 'Reply </a><a href="https://twitter.com/intent/retweet?' + 'tweet_id=' + tids[n] + '" class="twitter_retweet_icon"' + (targetBlank ? ' target="_blank">' : '>') + 'Retweet </a>' + '<a href="https://twitter.com/intent/favorite?tweet_id=' + tids[n] + '" class="twitter_fav_icon"' + (targetBlank ? ' target="_blank">' : '>') + 'Favorite </a></p>';
                     }
                     if (showImages && images[n] !== undefined && extractImageUrl(images[n]) !== undefined) {
-                        op += '<div class="media">' + '<img src="' + extractImageUrl(images[n]) + '" alt="Image from tweet" />' + '</div>';
+                        displayTweet += '<div class="media">' + '<img class="twitterImage" src="' + extractImageUrl(images[n]) + '" alt="Image from tweet" />' + '</div>';
                     }
                     if (showImages) {
-                        arrayTweets.push(op);
+                        console.log(displayTweet);
+                        arrayTweets.push(displayTweet);
                     } else if (!showImages && tweets[n].textContent.length) {
-                        arrayTweets.push(op);
+                        console.log(displayTweet);
+                        arrayTweets.push(displayTweet);
                     }
                     n++;
                 }
