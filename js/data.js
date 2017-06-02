@@ -111,7 +111,7 @@ $(document).ready(function(){
             authorized = true;
         }
         if (firstName == '' || lastName == '' || email == '' || password == '' || passwordConfirm == '') {
-            alert("Please fill all fields...!!!!!!");
+            var signUpPassword =
         }
         else if (!(password).match(passwordConfirm)) {
             alert("Your passwords don't match. Try again?");
