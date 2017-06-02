@@ -171,15 +171,10 @@ span.psw {
     border-color: darkgoldenrod;
 }
 /* all of those buttons are the same values so you can make it a class isntead */
-.media{
-    width: 10%;
-    height: 10%
-}
-.timePosted{
-    color: black;
-}
+
+
 .twitterImage{
-    width: 70%;
+    width: 50%;
     margin: auto;
     display: block;
     top: 50%;
