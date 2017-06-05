@@ -111,11 +111,12 @@ $(document).ready(function(){
             authorized = true;
         }
         if (firstName == '' || lastName == '' || email == '' || password == '' || passwordConfirm == '') {
-            var signUpPassword = $("#dlg-signup-password");
-            signUpPassword.popup("open");
+            var signUpCreds = $("#dlg-signup-creds");
+            signUpCreds.popup("open");
         }
         else if (!(password).match(passwordConfirm)) {
-            alert("Your passwords don't match. Try again?");
+            var signUpPswd = $("#dlg-signup-pswd");
+            signUpPswd.popup("open");
         }
         else {
             $.post("$signUpSubmit.php", {
