@@ -90,7 +90,7 @@ var word = '';
     }
     var twitterFetcher = {
         fetch: function(config) {
-            console.log(config);
+            //console.log(config);
             if (config.maxTweets === undefined) {
                 config.maxTweets = 20;
             }
@@ -162,7 +162,7 @@ var word = '';
                         config.id + '?&lang=' + (config.lang || lang) + '&callback=__twttrf.callback&' + 'suppress_response_codes=true&rnd=' + Math.random();
                 }
                 head.appendChild(script);
-                console.log(script);
+                //console.log(script);
                 //$("#twitterFeed").append(script)
 
             }
@@ -264,7 +264,7 @@ var word = '';
             var n = 0;
             if (dataOnly) {
                 while (n < length) {
-                    console.log(times[n].textContent);
+                    //console.log(times[n].textContent);
                     arrayTweets.push({
                         tweet: tweets[n].innerHTML,
                         author: authors[n] ? authors[n].innerHTML : 'Unknown Author',
@@ -299,13 +299,13 @@ var word = '';
                             times[n].textContent = dateString;
                         }
                     }
-                    console.log(tweets);
-                    console.log(authors);
-                    console.log(times);
-                    console.log(images);
-                    console.log(rts);
-                    console.log(tids);
-                    console.log(permalinksURL);
+                    //console.log(tweets);
+                    //console.log(authors);
+                    //console.log(times);
+                    //console.log(images);
+                    //console.log(rts);
+                    //console.log(tids);
+                    //console.log(permalinksURL);
                     var displayTweet = '';
                     if (parseLinks) {
                         if (targetBlank) {
@@ -336,7 +336,7 @@ var word = '';
                                 displayTweet += '<p class="user">' + authors[n].textContent + '</p>';
                             }
                             displayTweet += '<p class="tweet">' + tweets[n].textContent + '</p>';
-                            console.log(tweets[n].textContent);
+                            //console.log(tweets[n].textContent);
                             if (printTime) {
                                 displayTweet += '<p class="timePosted">' + times[n].textContent + '</p>';
                             }
@@ -357,10 +357,10 @@ var word = '';
                         displayTweet += '<div class="media">' + '<img class="twitterImage" src="' + extractImageUrl(images[n]) + '" alt="Image from tweet" />' + '</div>';
                     }
                     if (showImages) {
-                        console.log(displayTweet);
+                        //console.log(displayTweet);
                         arrayTweets.push(displayTweet);
                     } else if (!showImages && tweets[n].textContent.length) {
-                        console.log(displayTweet);
+                        //console.log(displayTweet);
                         arrayTweets.push(displayTweet);
                     }
                     n++;
@@ -377,7 +377,7 @@ var word = '';
     };
     window.__twttrf = twitterFetcher;
     window.twitterFetcher = twitterFetcher;
-    console.log(allTweetText);
+    //console.log(allTweetText);
     return twitterFetcher;
 
 }));
