@@ -334,13 +334,9 @@
                         <div class="mc-text-center"><a href="#signUp" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5" id="signUpButton" style="font-size: 20pt">Sign Up</a></div>
                     </div>
                 </div>
-            <div data-role="popup" id="dlg-signup-creds" data-dismissible="false" style="max-width:400px;">
 
-            </div>
 
-            <div data-role="popup" id="dlg-signup-pswd" data-dismissible="false" style="max-width:400px;">
 
-            </div>
 
             <a href="#signUp"><button id="toSignUp" style="font-size: 20pt">Sign Up</button></a>
         </div>
@@ -376,6 +372,22 @@
                     <p id="congratulationsMessage"></p>
                     <div class="mc-text-center"><a href="#signIn" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
                 </div>
+           </div>
+           <div data-role="popup" id="dlg-signup-creds" data-dismissible="false" style="max-width:400px;">
+               <div role="main" class="ui-content">
+                   <h3 class="mc-text-danger">Sign Up Failed</h3>
+                   <p>Did you enter the right credentials?</p>
+                   <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">Try Again</a></div>
+
+               </div>
+           </div>
+           <div data-role="popup" id="dlg-signup-pswd" data-dismissible="false" style="max-width:400px;">
+               <div role="main" class="ui-content">
+                   <h3 class="mc-text-danger">Sign Up Failed</h3>
+                   <p>Your passwords don't match</p>
+                   <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">Try Again</a></div>
+
+               </div>
            </div>
    </div>
    </div>

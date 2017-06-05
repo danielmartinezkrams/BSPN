@@ -94,7 +94,19 @@ $(document).ready(function(){
         //console.log(email);
         //console.log(password);
         //console.log(passwordConfirm);
-        if(password == passwordConfirm){
+
+        if (firstName == '' || lastName == '' || email == '' || password == '' || passwordConfirm == '') {
+            console.log("hello");
+            var signUpCreds = $("#dlg-signup-creds");
+            signUpCreds.popup("open");
+        }
+        else if (password !== passwordConfirm) {
+            var signUpPswd = $("#dlg-signup-pswd");
+            signUpPswd.popup("open");
+            console.log("hi");
+        }
+
+        else if(password == passwordConfirm){
             character = new Character(firstName, lastName, email, password);
             passwordData.push({
                 "email": email,
@@ -109,14 +121,6 @@ $(document).ready(function(){
             $congratulationsMessage.html(character.firstName + ", welcome to BSPN!");
             $signUpSent.popup("open");
             authorized = true;
-        }
-        if (firstName == '' || lastName == '' || email == '' || password == '' || passwordConfirm == '') {
-            var signUpCreds = $("#dlg-signup-creds");
-            signUpCreds.popup("open");
-        }
-        else if (!(password).match(passwordConfirm)) {
-            var signUpPswd = $("#dlg-signup-pswd");
-            signUpPswd.popup("open");
         }
         else {
             $.post("$signUpSubmit.php", {
