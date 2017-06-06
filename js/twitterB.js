@@ -1,12 +1,8 @@
 /**
  * Created by h205p2 on 6/1/17.
  */
-
-
 var allTweetText = [];
-
 var texts = "";
-
 var word = '';
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {

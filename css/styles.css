@@ -177,4 +177,9 @@ span.psw {
     display: block;
     margin: auto;
 }
-wow
+.tweet{
+    font-size: 24pt;
+}
+.ui-listview>li p{
+    font-size: 24pt;
+}
