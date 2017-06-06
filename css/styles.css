@@ -13,27 +13,18 @@ p.customfont {
     font-size: 50pt;
     color: white;
     position: relative;
-    top: 14vh;
 }
 
 h3{
     position: relative;
-    top: 10px;
-    left: 30px;
+    text-align: center;
     font-size: 25pt;
 }
 
-#widget{
-    position: relative;
-    top: 20px;
-    left: 30px;
-    font-size: 50pt;
-}
 
 .bhsLogo{
-    width: 30%;
+    width: 25%;
     position: relative;
-    top: -5vh;
 }
 
 form {
