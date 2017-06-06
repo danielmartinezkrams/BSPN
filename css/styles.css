@@ -8,7 +8,7 @@ body{
     src: url(fonts/esp_ital.ttf) format("truetype");
 }
 
-p.customfont {
+.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
     font-size: 50pt;
     color: white;
@@ -170,4 +170,10 @@ span.psw {
     display: block;
     top: 50%;
     left: 50%;
+}
+
+#twitterList{
+    width: 80%;
+    display: block;
+    margin: auto;
 }
