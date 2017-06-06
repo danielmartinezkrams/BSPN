@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     var configBHSJacketSports = {
             "profile": {"screenName": "BHSjacketSports"},
             "domId": 'example1',
@@ -22,11 +21,5 @@ $(document).ready(function() {
     };
     twitterFetcher.fetch(configBHSJacketSports);
     twitterFetcher.fetch(configBSPN);
-    console.log(allTweetText);
-    /*var $twitterList = $("#twitterList")
-    for(var i = 0; i  < allTweetText.length; i++){
-        $($twitterList).append("<li>" + allTweetText[i] + "</li>")
-    }
-    */
-
+    //console.log(allTweetText);
 });

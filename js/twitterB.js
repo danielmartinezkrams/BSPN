@@ -383,11 +383,3 @@ var word = '';
 }));
 
 
-
-
-
-
-function dateFormatter(date) {
-    return date.toTimeString();
-}
-
