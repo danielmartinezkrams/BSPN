@@ -183,3 +183,9 @@ span.psw {
 .ui-listview>li p{
     font-size: 24pt;
 }
+p.cf{
+    text-size: 20pt;
+}
+.wall-items > .item h2{
+    font-size: 40pt;
+}
