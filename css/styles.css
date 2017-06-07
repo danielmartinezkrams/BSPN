@@ -189,3 +189,6 @@ p.cf{
 .wall-items > .item h2{
     font-size: 40pt;
 }
+a, a:link{
+    font-size: 20pt;
+}
