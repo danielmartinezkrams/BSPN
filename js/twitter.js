@@ -29,4 +29,17 @@ $(document).ready(function() {
 
     console.log(allTweetText);
 
+    var configBSPNB = {
+        "profile": {"screenName": "BerkeleySPN"},
+        "domId": 'Twitter1',
+        "maxTweets": 20,
+        "enableLinks": true,
+        "showUser": true,
+        "showTime": true,
+        "showImages": true,
+        "lang": 'en'
+    };
+    twitterFetcher.fetch(configBSPNB);
+    console.log(allTweetText);
+
 });
