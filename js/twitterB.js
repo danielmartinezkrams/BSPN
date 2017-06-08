@@ -1,13 +1,9 @@
 /**
  * Created by h205p2 on 6/1/17.
  */
-
-
 var allTweetText = [];
-
 var texts = "";
 
-var word = '';
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define([], factory);
@@ -53,7 +49,7 @@ var word = '';
         } else {
             customCallbackFunction(tweets);
         }
-        //     console.log(tweets);
+             console.log(tweets);
         //   console.log($('.tweet').text)
     }
 
@@ -90,7 +86,7 @@ var word = '';
     }
     var twitterFetcher = {
         fetch: function(config) {
-            //console.log(config);
+            console.log(config);
             if (config.maxTweets === undefined) {
                 config.maxTweets = 20;
             }
@@ -162,7 +158,7 @@ var word = '';
                         config.id + '?&lang=' + (config.lang || lang) + '&callback=__twttrf.callback&' + 'suppress_response_codes=true&rnd=' + Math.random();
                 }
                 head.appendChild(script);
-                //console.log(script);
+                console.log(script);
                 //$("#twitterFeed").append(script)
 
             }
@@ -264,7 +260,7 @@ var word = '';
             var n = 0;
             if (dataOnly) {
                 while (n < length) {
-                    //console.log(times[n].textContent);
+                    console.log(times[n].textContent);
                     arrayTweets.push({
                         tweet: tweets[n].innerHTML,
                         author: authors[n] ? authors[n].innerHTML : 'Unknown Author',

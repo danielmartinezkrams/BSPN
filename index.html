@@ -8,6 +8,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/data.js"></script>
     <script src="js/twitter.js"></script>
     <script src="js/twitterB.js"></script>
@@ -16,14 +17,22 @@
 
 <body>
 
-    <div data-role="page" id="home">
-
+    <div data-role="page" id="home" class="page" data-next="calendar">
+       <!-- <div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="prevCity" data-next="nextCity" data-url="city">
+    <div role="main" class="ui-content">
+        <div id="trivia-city" class="trivia ui-content" data-role="popup" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
+            <a href="#" data-rel="back" class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all">Close</a>
+            <p>Here some text.</p>
+        </div> popup
+            </div> content
+    </div> -->
         <div data-role="panel" id="myPanelHome" data-position="left" data-display="overlay">
-            <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
+            <h1>Berkeley Sports Programming Network</h1>
+            <p>© 2017</p>
         </div>
 
         <div data-role="header" data-id="theHeader" data-position="fixed" style="background-color: red">
-            <a href="#myPanelHome" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
+            <a href="#myPanelHome" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 20%; width: 15%; border-radius: 0px"></a>
             <div class="customfont">BSPN</div>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
 
@@ -41,18 +50,19 @@
 
 
         <div data-role="footer" data-id="theFooter" data-position="fixed" style="background-color: red">
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
         </div>
 
     </div>
 
-    <div data-role="page" id="calendar">
+    <div data-role="page" id="calendar" class="page" data-prev="home" data-next="sportsA">
 
         <div data-role="panel" id="myPanelCalendar" data-position="left" data-display="overlay">
-            <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
+            <h1>Berkeley Sports Programming Network</h1>
+            <p>© 2017</p>
         </div>
 
         <div data-role="header" data-id="theHeader" data-position="fixed" style="background-color: red">
@@ -60,24 +70,25 @@
                 BSPN
             </div>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="#myPanelCalendar" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
+            <a href="#myPanelCalendar" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 20%; width: 15%; border-radius: 0px"></a>
         </div>
 
         <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=athleticdirector%40berkeley.net&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="900" height="1400" frameborder="700" scrolling="yes"></iframe>
 
         <div data-role="footer" data-id="theFooter" data-position="fixed" style="background-color: red">
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
         </div>
     </div>
 
 
-    <div data-role="page" id="sportsA">
+    <div data-role="page" id="sportsA" class="page" data-prev="calendar" data-next="news">
 
         <div data-role="panel" id="myPanelSportsA" data-position="left" data-display="overlay">
-            <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
+            <h1>Berkeley Sports Programming Network</h1>
+            <p>© 2017</p>
         </div>
 
         <div data-role="header" data-id="theHeader" data-position="fixed" style="background-color: red">
@@ -85,7 +96,7 @@
                 BSPN
             </div>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="#myPanelSportsA" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
+            <a href="#myPanelSportsA" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 20%; width: 15%; border-radius: 0px"></a>
         </div>
 
         <div data-role="main" class="ui-content" id="sportsList">
@@ -221,17 +232,18 @@
             </ul>
             </div>
         <div data-role="footer" data-id="theFooter" data-position="fixed" style="background-color: red">
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
         </div>
     </div>
 
     <div data-role="page" id="sportsB">
 
         <div data-role="panel" id="myPanelSportsB" data-position="left" data-display="overlay">
-            <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
+            <h1>Berkeley Sports Programming Network</h1>
+            <p>© 2017</p>
         </div>
 
         <div data-role="header" data-id="theHeader" data-position="fixed" style="background-color: red">
@@ -240,23 +252,24 @@
             </div>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
             <a href="#sportsA" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
-            <a href="#myPanelSportsB" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
+            <a href="#myPanelSportsB" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 20%; width: 15%; border-radius: 0px"></a>
         </div>
 
         <div id="widget"></div>
 
         <div data-role="footer" data-id="theFooter" data-position="fixed" style="background-color: red">
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
         </div>
     </div>
 
-    <div data-role="page" id="news">
+    <div data-role="page" id="news" class="page" data-prev="sportsA">
 
         <div data-role="panel" id="myPanelNews" data-position="left" data-display="overlay">
-            <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
+            <h1>Berkeley Sports Programming Network</h1>
+            <p>© 2017</p>
         </div>
 
 
@@ -265,7 +278,7 @@
                 BSPN
             </div>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
-            <a href="#myPanelNews" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
+            <a href="#myPanelNews" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 20%; width: 15%; border-radius: 0px"></a>
         </div>
 
 
@@ -286,10 +299,10 @@
         -->
 
         <div data-role="footer" data-id="theFooter" data-position="fixed" style="background-color: red">
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
-            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; width: 20%; border-radius: 0px"></a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#calendar" data-role="button" data-icon="calendar" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#sportsA" data-role="button" data-icon="grid" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
+            <a href="#news" data-role="button" data-icon="bullets" data-iconpos="notext" style="background-color: gold; border-color: darkgoldenrod; height: 60px; width: 20%; border-radius: 0px"></a>
         </div>
 
 
@@ -298,7 +311,7 @@
 
     </div>
 
-
+<!--
 
 
     <div data-role="page" id="signIn">
@@ -400,7 +413,7 @@
             </div>
             <img class="bhsLogo" src="img/transparent-jackets-logo.png">
             <a href="#signIn" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
-            <a href="#myPanelBeginPasswordReset" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 10%; width: 10%; border-radius: 0px"></a>
+            <a href="#myPanelBeginPasswordReset" data-icon="gear" data-iconpos="notext" class="ui-btn-right" style="background-color: gold; border-color: darkgoldenrod; height: 20%; width: 15%; border-radius: 0px"></a>
         </div>
         <div role="main" class="ui-content">
             <h3>Password Reset</h3>
@@ -420,7 +433,7 @@
         </div>
     </div>
 
-    <div data-role="page" id="end-password-reset">
+    <div data-role="page" id="end-password-reset" class="page">
         <div data-role="header" data-theme="c">
             <h1>Book It</h1>
         </div>
@@ -444,6 +457,8 @@
             </div>
         </div>
     </div>
+
+-->
 
 
 
