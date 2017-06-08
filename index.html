@@ -8,6 +8,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/data.js"></script>
     <script src="js/twitter.js"></script>
     <script src="js/twitterB.js"></script>
@@ -16,7 +17,7 @@
 
 <body>
 
-    <div data-role="page" id="home">
+    <div data-role="page" id="home" class="page" data-next="calendar">
        <!-- <div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="prevCity" data-next="nextCity" data-url="city">
     <div role="main" class="ui-content">
         <div id="trivia-city" class="trivia ui-content" data-role="popup" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
@@ -56,7 +57,7 @@
 
     </div>
 
-    <div data-role="page" id="calendar">
+    <div data-role="page" id="calendar" class="page" data-prev="home" data-next="sportsA">
 
         <div data-role="panel" id="myPanelCalendar" data-position="left" data-display="overlay">
             <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
@@ -81,7 +82,7 @@
     </div>
 
 
-    <div data-role="page" id="sportsA">
+    <div data-role="page" id="sportsA" class="page" data-prev="calendar" data-next="news">
 
         <div data-role="panel" id="myPanelSportsA" data-position="left" data-display="overlay">
             <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
@@ -260,7 +261,7 @@
         </div>
     </div>
 
-    <div data-role="page" id="news">
+    <div data-role="page" id="news" class="page" data-prev="sportsA">
 
         <div data-role="panel" id="myPanelNews" data-position="left" data-display="overlay">
             <a href="#signIn"><button style="background-color: gold; border-color: darkgoldenrod; font-size: 20pt">Sign In</button></a>
@@ -427,7 +428,7 @@
         </div>
     </div>
 
-    <div data-role="page" id="end-password-reset">
+    <div data-role="page" id="end-password-reset" class="page">
         <div data-role="header" data-theme="c">
             <h1>Book It</h1>
         </div>
