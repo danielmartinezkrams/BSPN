@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var configBSPN = {
-        "profile": {"screenName": "BerkeleySPN"},
+        "profile": {"screenName": "BerkSPN"},
         "domId": 'Twitter1',
         "maxTweets": 20,
         "enableLinks": true,
@@ -27,18 +27,7 @@ $(document).ready(function() {
     twitterFetcher.fetch(configBHSJacketSports);
 
 
-    console.log(allTweetText);
 
-    var configBSPNB = {
-        "profile": {"screenName": "BerkeleySPN"},
-        "domId": 'Twitter1',
-        "maxTweets": 20,
-        "enableLinks": true,
-        "showUser": true,
-        "showTime": true,
-        "showImages": true,
-        "lang": 'en'
-    };
     twitterFetcher.fetch(configBSPNB);
     console.log(allTweetText);
 
