@@ -3,6 +3,7 @@
  */
 var allTweetText = [];
 var texts = "";
+var html = '<ul data-role="listview">';
 
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -35,17 +36,15 @@ var texts = "";
 
     function handleTweets(tweets) {
         if (customCallbackFunction === null) {
-            var x = tweets.length;
             var n = 0;
             var $twitterList = $("#twitterList");
-            var html = '<ul data-role="listview">';
             var placeHolder = "";
-            while (n < x) {
+            while (n < tweets.length) {
                 placeHolder += '<li>' + tweets[n] + '</li>';
                 n++;
             }
             html += '</ul>';
-            $twitterList.html(placeHolder);
+            $twitterList.append(placeHolder);
         } else {
             customCallbackFunction(tweets);
         }
