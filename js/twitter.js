@@ -26,9 +26,6 @@ $(document).ready(function() {
     };
     twitterFetcher.fetch(configBHSJacketSports);
 
-
-
-    twitterFetcher.fetch(configBSPNB);
     console.log(allTweetText);
 
 });
